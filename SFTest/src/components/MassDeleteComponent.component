@@ -1,0 +1,32 @@
+<apex:component controller="MassDeleteController" allowDML="true">
+<script type="text/javascript">
+     //check/uncheck the selected records in the selected list
+    function checkAll(cb,cbid){
+            var inputElem = document.getElementsByTagName("input");                    
+            for(var i=0; i<inputElem.length; i++){            
+                 if(inputElem[i].id.indexOf(cbid)!=-1){                                       
+                    inputElem[i].checked = cb.checked;
+                 }
+            }
+    }
+</script>
+
+<apex:attribute name="ListRecs" description="list of records passed" type="sObject[]" assignTo="{!sObjList}"/>
+<apex:attribute name="listofield" description="List of fields" type="string[]" required="false" assignTo="{!SobjFieldList}"/>
+  <apex:form >
+      <apex:pageBlock id="pgblck"  rendered="{!ListWrapperMethod.size > 0}">
+          <apex:pageBlockTable value="{!ListWrapperMethod}" var="wrapVar" >
+              <apex:repeat value="{!FieldList}" var="fl">
+                  <apex:column value="{!wrapVar.sObjRec[fl]}"/>
+               </apex:repeat>
+               <apex:column >
+               <apex:facet name="header">
+                      <apex:inputCheckbox id="selectAllChecks" value="{!wrapVar.SelectBox}" onclick="checkAll(this,'eachrow')"/>
+               </apex:facet>
+               <apex:inputcheckbox value="{!wrapVar.SelectBox}" id="eachrow"/>
+               </apex:column>
+             </apex:pageBlockTable>
+           <apex:commandButton value=" Delete Records " action="{!DeleteSelectedRecs}" reRender="pgblck"/>  
+        </apex:pageBlock>
+  </apex:form>
+</apex:component>
