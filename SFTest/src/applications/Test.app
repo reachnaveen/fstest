@@ -4,6 +4,5 @@
     <label>Test</label>
     <tab>standard-Chatter</tab>
     <tab>standard-File</tab>
-    <tab>standard-report</tab>
     <tab>standard-Dashboard</tab>
 </CustomApplication>
