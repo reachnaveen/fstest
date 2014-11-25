@@ -11,7 +11,6 @@ Public List<String> fieldstringMap{get;set;}
         fieldstringMap.add('naveenk__Job_Applications__c');
         fieldstringMap.add('naveenk__Job_Position__c');
         fieldstringMap.add('naveenk__Status__c');      
-        fieldstringMap.add('naveenk__Test');
         return fieldstringMap;
     }
      
