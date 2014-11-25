@@ -10,6 +10,10 @@
     </types>
     <types>
         <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>ApprovalProcess</name>
     </types>
     <types>
@@ -23,6 +27,14 @@
     <types>
         <members>*</members>
         <name>CustomTab</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Workflow</name>
     </types>
     <version>31.0</version>
 </Package>
