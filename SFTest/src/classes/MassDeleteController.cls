@@ -56,9 +56,6 @@ Public List<WrapperClass> WrapperList{get;set;}
         for (Integer i = 0; i < e.getNumDml(); i++) {
             Integer indx = e.getDmlIndex(i);
             SObject errorRec = UpdateList.get(indx);
-            System.debug('======== '+ e.getDmlFields(i)[0]);
-            System.debug('======== '+ errorRec.getSObject(e.getDmlFields(i)[0]));
-            //errorRec.getSObject(e.getDmlFields(i)[0]).addError('Record [' + (indx + 1 ) + '] ' + e.getDmlMessage(i));
       }
       }
       return null;     
