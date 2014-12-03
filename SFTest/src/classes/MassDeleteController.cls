@@ -56,6 +56,7 @@ Public List<WrapperClass> WrapperList{get;set;}
         for (Integer i = 0; i < e.getNumDml(); i++) {
             Integer indx = e.getDmlIndex(i);
             SObject errorRec = UpdateList.get(indx);
+            System.Debug('Test Feature');
       }
       }
       return null;     
